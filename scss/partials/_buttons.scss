@@ -1,0 +1,61 @@
+///////////////////////////////////////////////////
+//??				  					       ??//
+//??			  BUTTONS STYLES			   ??//
+//??				  					   	   ??//
+///////////////////////////////////////////////////
+
+// Basic link 
+a {
+	color: $color-four;
+	text-decoration:none;
+	font-family: $font-family-one;
+	font-size: $primary-size;
+	&:hover {
+		color:$color-one;
+	}
+}
+
+// Transitions
+
+a, input[type="submit"], a.button, input.button {
+	@include transition(all 300ms ease-in-out);
+}
+
+/* Buttons */
+
+a.button, .gform_wrapper .gform_footer input[type=submit] {
+	display:block;
+	margin:auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width:50%;
+	max-width: 300px;
+	padding: 12px 20px 12px 20px;
+	background-color: $color-one;
+	background-image: url(images/arrow.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	color:$white;
+	text-align: center;
+	text-decoration: none;
+	font-family: $font-family-two;
+	font-size: $tertiary-size;
+	font-weight: $light;
+	text-transform: uppercase;
+	@include border-radius(0px);
+
+	&:hover {
+	    background-color: $color-two;
+		color:$white;
+	}
+}
+
+a.button.alt {
+	background-color: $color-two;
+	color:$white;
+
+	&:hover {
+	    background-color: $color-one;
+		color:$white;
+	}
+}

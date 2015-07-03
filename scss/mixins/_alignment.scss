@@ -1,0 +1,55 @@
+///////////////////////////////////////////////////
+//??                                           ??//
+//??              *-  MIXINS  -*               ??//
+//??            *-  ALIGNMENT  -*              ??//
+//??                                           ??//
+///////////////////////////////////////////////////
+
+
+// Vertical Align
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+// Reset Vertical Align
+
+@mixin reset-vertical-align {
+  top: 0%;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+
+// Centering stuff Stuff
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center_absolute {
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@mixin alignment($condition){
+  @if $condition == center {
+    margin: auto;
+  } @else if $condition == left {
+    float:left;
+  } @else if $condition == right {
+    float:right;
+  } @else {
+    // return nothing
+  }
+}

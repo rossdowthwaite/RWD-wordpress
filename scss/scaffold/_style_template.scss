@@ -1,0 +1,81 @@
+#header_ {
+	background-color: $color-one;
+	@include clearfix();
+}
+
+#colors_ .column.five {
+	height:150px;
+
+	h1, h2, h3, h4, h5, h6 { 
+		text-align: center;
+		margin-top: 20px;
+		@include breakpoint(smart) 
+		{ 
+			margin-top:0px;
+			padding-bottom: 10px;
+		}
+	}
+
+	@include breakpoint(smart) 
+	{ 
+		height:50px;
+	}
+}
+
+#color-one {
+	background-color: $color-one;
+	h5 {
+		color: set-text-color($color-one);
+	}
+}
+#color-two {
+	background-color: $color-two;
+	h5 {
+		color: set-text-color($color-two);
+	}
+}
+#color-three {
+	background-color: $color-three;
+	h5 {
+		color: set-text-color($color-three);
+	}
+}
+#color-four {
+	background-color: $color-four;
+	h5 {
+		color: set-text-color($color-four);
+	}
+}
+#color-five {
+	background-color: $color-five;
+	h5 {
+		color: set-text-color($color-five);
+	}
+}
+
+.heading1{
+	background-color: $color-five;
+}
+
+.heading2{
+	background-color: $color-five;
+}
+
+#pcont_ {
+	background-color: $color-four;
+}
+
+#paragraph_alt {
+	background-color: $color-three;
+}
+
+#quote_ {
+	background-color: $color-two;
+	h2 {
+		color: set-text-color($color-two);
+	}
+}
+
+#buttons_ {
+	background-color: $color-five;
+}

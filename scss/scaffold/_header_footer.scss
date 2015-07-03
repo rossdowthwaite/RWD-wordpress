@@ -1,0 +1,34 @@
+///////////////////////////////////////////////////
+//??				  					       ??//
+//??			  *- SCAFFOLD -*		       ??//
+//??			 HEADER & FOOTER			   ??//
+//??				  					   	   ??//
+///////////////////////////////////////////////////
+
+// Header 
+
+#header-span {
+	background-color: $color-five;
+	header {
+		position: relative;
+	}
+	@include breakpoint(smart)   
+	{ 
+		header.fixed-width {
+			padding: 0% 0%;
+			margin: 0;
+			width:100%;
+		}
+	}
+}
+
+
+// Footer
+
+#footer-span {
+	height:300px;
+	#footer {
+		border-top: solid 1px $color-five;
+		padding-top: 30px;
+	}
+}

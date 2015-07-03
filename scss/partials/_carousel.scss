@@ -1,0 +1,45 @@
+///////////////////////////////////////////////////
+//??				  					       ??//
+//??			  	CAROUSEL				   ??//
+//??				  					   	   ??//
+///////////////////////////////////////////////////
+
+// Hero Carousel
+
+#hero {
+ 	width:500px;
+ 	position: relative;
+ 	z-index: 1;
+ 	.bx-wrapper{
+ 		height:100%;
+ 		.bx-viewport {
+ 			height:100% !important;
+ 			#hero-carousel {
+				height:500px;
+				.carousel-slide {
+					height:500px;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+ 		}
+ 	} 
+}
+
+// Generic carousel
+
+.carousel {
+	height: 300px;
+	.carousel-slide {
+		height:300px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		.carousel-inner {
+			// 
+		}
+	}
+}
+
+// Add more carousel ID's Below...

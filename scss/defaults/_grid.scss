@@ -1,0 +1,148 @@
+///////////////////////////////////////////////////
+//??                                           ??//
+//??             *-   CONFIG   -*              ??//
+//??        	* GRID BOOTSTRAP *             ??//
+//??                                           ??//
+///////////////////////////////////////////////////
+
+@charset "UTF-8";
+/* CSS Document */
+
+/* structure */
+
+div {
+	position:relative;
+	height:auto;
+	overflow:visible;
+}
+
+html, body {
+	width:100%;
+	min-width:100%;
+	margin:0;
+	z-index:0;
+}
+
+.full-width {
+	width:100%;
+	min-width:600px;
+	@include clearfix();
+	@include breakpoint(smart) 
+	{ 
+		width:100%;
+		min-width:100%;
+		margin:0;
+	}
+}
+
+.fixed-width {
+	width:90%;
+	padding:0 5%;
+	margin:0 auto;
+	min-width:432px;
+	max-width:1080px;
+	@include clearfix();
+	@include breakpoint(smart) 
+	{ 
+		min-width:0;
+	}
+}
+ 
+/* columns */
+.row {
+	clear:both;
+	padding-top:40px;
+	padding-bottom:40px;
+	@include breakpoint(smart) 
+	{ 
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+}
+
+.column {
+	float:left;
+	margin-right:3%;
+	text-align:left;;
+}
+
+#content .column {
+	@include breakpoint(smart) 
+	{ 
+		float:none;
+		margin-right:0;
+		clear:both;
+		width:100%;
+	}
+}
+
+
+// THREE > TWO > ONE 
+#content .column.to_two{
+	@include breakpoint(ipad_span)   
+	{ 
+		width:46%;
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+}
+
+.column.one {
+	width:100%;
+	margin-right:0;
+	float:none;
+}
+
+.column.two 				{ width:48.5%;}
+.column.three 				{ width:31.3%;}
+.column.thirds 				{ width:65.6%;}
+.column.four 				{ width:22.7%;}
+.column.four.remain-three 	{ width:74.3%;}
+.column.five 				{ width:17.6%;}
+.column.five.remain-four 	{ width:79.4%;}
+.column.six 				{ width:14.1%;}
+.column.last 				{ margin-right:0;}
+
+// spread over full area;
+.column.full 				{ margin-right:0;}
+.column.two.full 			{ width:50%; }
+.column.three.full 			{ width:33.3%; }
+.column.thirds.full 		{ width:66.6%; }
+.column.four.full 			{ width:25%; }
+.column.five.full 			{ width:20%; }
+.column.six.full 			{ width:16.6%; }
+
+// Even margins each side
+.column.two.filter 		{ 		width:46%; margin-left: 2%; margin-right:2%}
+.column.three.filter 	{ 		width:31.3%; margin-left: 1%; margin-right:1%}
+.column.four.filter 	{ 		width:23%; margin-left: 1%; margin-right:1%}
+.column.five.filter 	{ 		width:18%; margin-left: 1%; margin-right:1%}
+
+.column_set{
+	@include clearfix();
+	margin-bottom: 20px;
+	@include breakpoint(ipad_span)   
+	{ 
+		@include un-clearfix();
+	}
+}
+
+#content .fixed-width .column.full {
+    @include breakpoint(smart) 
+	{ 
+		width:90%;
+		padding:5% 5%;
+	}
+}
+
+#content .full-width .column.full {
+    @include breakpoint(smart) 
+	{ 
+		width:90%;
+		padding:5% 5%;
+		padding-top:40px;
+		padding-bottom:40px;
+	}
+}
+
+

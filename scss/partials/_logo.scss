@@ -1,0 +1,49 @@
+///////////////////////////////////////////////////
+//??				  					       ??//
+//??			  	  LOGOS					   ??//
+//??				  					   	   ??//
+///////////////////////////////////////////////////
+
+a.logo {
+	position: relative;
+	margin-top: 24px;
+	cursor:pointer;
+	min-height:120px;
+	width:400px;
+	text-transform:capitalize;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-image:url(images/logo.png); 
+	@include hide-text();
+	
+	@include breakpoint(retina) 
+	{ 
+		background-image:url(images/logo-retina.png);
+    	background-size:400px 120px;
+	}
+
+	@include breakpoint(smart) 
+	{ 
+		width:100%;
+		margin-top: 0px;
+		background-image:url(images/logo-smart.png);
+    	background-size:300px 90px;
+    	@include breakpoint(retina) 
+		{ 
+			background-image:url(images/logo-smart-retina.png);
+    		background-size:250px 75px
+		}
+	}
+
+	@include breakpoint(ipad-portrait) 
+	{ 
+		width:300px;
+		background-image:url(images/logo-smart.png);
+    	background-size:300px 90px;
+    	@include breakpoint(retina) 
+		{ 
+			background-image:url(images/logo-smart-retina.png);
+    		background-size:250px 75px
+		}
+	}
+}

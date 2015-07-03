@@ -1,0 +1,33 @@
+/*!
+Theme Name: Pixeldot
+Theme URI: http://www.pixeldotcreative.com/
+Author: Pixeldot
+Author URI: http://www.pixeldotcreative.com/
+Description: Pixeldot Theme
+Version: 1.0
+License: Copyright Pixeldot Creative Ltd
+Text Domain: pixeldot
+*/
+
+@import "partials/base";
+
+// Partials
+@import "partials/nav";
+@import "partials/typology";
+@import "partials/lists";
+@import "partials/buttons";
+@import "partials/gf/forms";
+@import "partials/logo";
+@import "partials/carousel";
+@import "partials/tables";
+@import "partials/map";
+@import "partials/pagination";
+
+// Scaffold
+@import "scaffold/style_template"; // delete this to remove starter theme style.
+@import "scaffold/layout";
+@import "scaffold/post";
+@import "scaffold/content";
+@import "scaffold/header_footer";
+@import "scaffold/category";
+@import "scaffold/home";

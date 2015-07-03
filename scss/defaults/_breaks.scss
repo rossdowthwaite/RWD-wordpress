@@ -1,0 +1,226 @@
+///////////////////////////////////////////////////
+//??                                           ??//
+//??             *-   CONFIG   -*              ??//
+//??             * BREAK POINTS *              ??//
+//??                                           ??//
+///////////////////////////////////////////////////
+
+
+@mixin breakpoint($class) {
+
+  // Smart Phone
+  @if $class == smart {
+    @media only screen
+    and (min-width : 320px)
+    and (max-width : 480px) { @content; }
+  }
+ 
+  @else if $class == smart-landscape {
+    @media only screen
+    and (min-width : 321px) { @content; }
+  }
+
+  @else if $class == smart-portrait {
+    @media only screen
+    and (max-width : 320px) { @content; }
+  }
+
+  // ipad
+  @else if $class == ipad {
+    @media only screen
+    and (min-width : 768px)
+    and (max-width : 1024px) { @content; }
+  }
+
+  @else if $class == ipad_span {
+    @media only screen
+    and (min-width : 480px)
+    and (max-width : 1024px) { @content; }
+  }
+
+  @else if $class == ipad-landscape {
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) { @content; }
+  }
+
+  @else if $class == ipad-portrait {
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) { @content; }
+  }
+
+  @else if $class == retina {
+    @media screen 
+    and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {  @content; }
+  }
+
+  @else if $class == small-screen {
+    @media only screen
+    and (max-width : 990px){ @content; }
+  }
+
+  // 1366x768 screens
+  @else if $class == screen-xl {
+    @media only screen
+    and (max-width : 1366px){ @content; }
+  }
+
+  // 1280x1024 screens
+  @else if $class == screen-l {
+    @media only screen
+    and (max-width : 1280px){ @content; }
+  }
+
+  // 1024x768 screens
+  @else if $class == screen-med {
+    @media only screen
+    and (max-width : 1024){ @content; }
+  }
+
+  @else if $class == screen-sm {
+    @media only screen
+    and (max-width : 800px){ @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: smart, smart-landscape, smart-portrait, ipad, ipad-landscape, ipad-portrait";
+  }
+}
+
+
+// /* Smartphones (portrait and landscape) ----------- */
+// @media only screen
+// and (min-device-width : 320px)
+// and (max-device-width : 480px) {
+// /* STYLES GO HERE */
+// }
+ 
+// /* Smartphones (landscape) ----------- */
+// @media only screen
+// and (min-width : 321px) {
+// /* STYLES GO HERE */
+// }
+ 
+// /* Smartphones (portrait) ----------- */
+// @media only screen
+// and (max-width : 320px) {
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPads (portrait and landscape) ----------- */
+// @media only screen
+// and (min-device-width : 768px)
+// and (max-device-width : 1024px) {
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPads (landscape) ----------- */
+// @media only screen
+// and (min-device-width : 768px)
+// and (max-device-width : 1024px)
+// and (orientation : landscape) {
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPads (portrait) ----------- */
+// @media only screen
+// and (min-device-width : 768px)
+// and (max-device-width : 1024px)
+// and (orientation : portrait) {
+// /* STYLES GO HERE */
+// }
+ 
+// /* Desktops and laptops ----------- */
+// @media only screen
+// and (min-width : 1224px) {
+// /* STYLES GO HERE */
+// }
+ 
+// /* Large screens ----------- */
+// @media only screen
+// and (min-width : 1824px) {
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPhone 5 (portrait &amp; landscape)----------- */
+// @media only screen
+// and (min-device-width : 320px)
+// and (max-device-width : 568px)
+// and (-webkit-min-device-pixel-ratio : 2){
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPhone 5 (landscape)----------- */
+// @media only screen
+// and (min-device-width : 320px)
+// and (max-device-width : 568px)
+// and (orientation : landscape)
+// and (-webkit-min-device-pixel-ratio : 2){
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPhone 5 (portrait)----------- */
+// @media only screen
+// and (min-device-width : 320px)
+// and (max-device-width : 568px)
+// and (orientation : portrait)
+// and (-webkit-min-device-pixel-ratio : 2) {
+// /* STYLES GO HERE */
+// }
+
+// /* iPhone 6 (portrait &amp; landscape)----------- */
+// @media only screen
+// and (min-device-width : 375px)
+// and (max-device-width : 667px)
+// and (-webkit-min-device-pixel-ratio : 2){
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPhone 6 (landscape)----------- */
+// @media only screen
+// and (min-device-width : 375px)
+// and (max-device-width : 667px)
+// and (orientation : landscape)
+// and (-webkit-min-device-pixel-ratio : 2){
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPhone 6 (portrait)----------- */
+// @media only screen
+// and (min-device-width : 375px)
+// and (max-device-width : 667px)
+// and (orientation : portrait)
+// and (-webkit-min-device-pixel-ratio : 2){
+// /* STYLES GO HERE */
+// }
+
+// /* iPhone 6 plus (portrait &amp; landscape)----------- */
+// @media only screen
+// and (min-device-width : 414px)
+// and (max-device-width : 736px)
+// and (-webkit-min-device-pixel-ratio : 3){
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPhone 6 plus (landscape)----------- */
+// @media only screen
+// and (min-device-width : 414px)
+// and (max-device-width : 736px)
+// and (orientation : landscape)
+// and (-webkit-min-device-pixel-ratio : 3){
+// /* STYLES GO HERE */
+// }
+ 
+// /* iPhone 6 plus (portrait)----------- */
+// @media only screen
+// and (min-device-width : 414px)
+// and (max-device-width : 736px)
+// and (orientation : portrait)
+// and (-webkit-min-device-pixel-ratio : 3){
+// /* STYLES GO HERE */
+// }
+
+

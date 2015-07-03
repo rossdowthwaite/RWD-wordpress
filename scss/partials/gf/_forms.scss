@@ -1,0 +1,50 @@
+/*  
+	FORMS
+*/
+
+// FORM WRAPPER 
+
+$form-width: 350px;
+$form-alignmnent: left; // center, left, right or none
+$form-font-weight: $light;
+
+// INPUT SCALE
+
+// Set the FULL and exact width you want ingnoring padding - width will adjust itself
+$input-width:				100%; // in % 
+$input-side-padding:		2%; // in %
+$input-vertical-padding:	10px;
+$input-border-style:		solid 1px $grey_two 	!default;
+$input-weight:				$light;
+$input-font-size:			$primary-size;
+$margin-bottom-top: 		10px;
+$border-radius:				0px;
+
+// INPUT COLORS
+
+// Input fields 
+$input-bg:           	$color-five 	!default;
+$input-color:        	$color-one 		!default;
+
+// Input fields focus 
+$input-bg-focus:     $color-one 			!default;
+$input-color-focus:	 $white					!default;
+$input-border-focus: solid 1px $grey_two 	!default;	
+
+$input-label-display: 		none;
+$input-label-color:        	$color-one 	!default;
+
+// Buttons
+$form-button-background:       #333 	!default;
+$form-button-background-hover: #0078e7 	!default;
+$form-button-color:            #fff 	!default;
+
+// Notifications
+$form-required: #f00 		!default;
+$form-muted:    $color-two 	!default;
+$input-error:   #ca3c3c 	!default;
+
+// Form content
+$form-font-size:   14px !default;
+
+@import "gravity_default";

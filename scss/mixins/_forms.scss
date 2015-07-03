@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////
+//??                                           ??//
+//??              *-  MIXINS  -*               ??//
+//??              *-   FORMS  -*               ??//
+//??                                           ??//
+///////////////////////////////////////////////////
+
+
+// Input width and padding calculation
+
+@function inputWidth($width, $padding) {
+  $input-width: $width - ($padding * 2);
+  @return $input-width;
+}
+
+@mixin input_scaling($width, $side_padding) {
+  width: inputWidth($width, $side_padding);
+  padding-left: $side_padding;
+  padding-right: $side_padding;
+}

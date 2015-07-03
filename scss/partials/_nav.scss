@@ -1,0 +1,132 @@
+///////////////////////////////////////////////////
+//??				  					       ??//
+//??			    NAVIGATION			   	   ??//
+//??				  					   	   ??//
+///////////////////////////////////////////////////
+
+// Main Navigation Styling 
+
+.nav.header_menu {
+	ul {
+		text-align: $nav-alignment;
+		li a {
+			padding: 10px 25px 10px 25px;  
+			color: $nav-color;
+			font-size: $seconary-size;
+			font-weight: $light;
+			background-color: $nav-color-bg;
+			font-family: $font-family-two;
+			letter-spacing: 1px;
+
+			&:hover {
+			    background-color: $nav-color-bg-hov;
+				color:$nav-color-hov;
+			}
+
+			@include breakpoint(ipad_span)   
+			{ 
+				padding: 10px 10px 10px 10px;
+			}
+			@include breakpoint(ipad-portrait)   
+			{ 
+				padding: 10px 1px 10px 1px;
+			}
+			@include breakpoint(screen-sm) // 800px  
+			{ 
+				//
+			}
+			@include breakpoint(screen-med) // 1024px
+			{ 
+				//
+			}
+			@include breakpoint(screen-l) // 1280px 
+			{ 
+				//
+			}
+			@include breakpoint(screen-xl) //1366px 
+			{ 
+				//
+			}
+		}
+		li.current_page_item a {
+			color:$white;
+		}
+	}
+}
+
+
+// Footer nav styling
+
+.nav.footer_menu ul {
+	text-align: center;
+	margin-bottom: 10px;
+	li {
+		border-right: solid 1px $nav-color; 
+		a {
+			padding: 0px 5px 0px 3px; 
+			color: $nav-color;
+			font-size: $primary-size;
+			font-weight: $light;
+			background-color: $nav-color-bg;
+			font-family: $font-family-two;
+			letter-spacing: 1px;
+
+			&:hover {
+			    background-color: $nav-color-bg-hov;
+				color:$nav-color-hov;
+			}
+		}
+	}
+	li:last-of-type {
+		border-right: none;
+	}
+} 
+
+
+// Mobile Navigation styling 
+
+span#mobile-nav {
+	@include breakpoint(smart) 
+	{ 
+		display: block;
+		cursor:pointer;
+		z-index:1001;
+		background: $color-one;
+		font-family: $heading-font-family;
+		color:white;
+		height:70px;
+		width:70px;
+		line-height:70px;
+		text-align:center;
+		z-index: 101;
+
+		&:hover {
+		    background-color: $nav-color-bg-hov;
+			color:$nav-color-hov;
+		}
+	}
+	@include transition(all 300ms ease-in-out);
+}
+
+.nav.visi-nav {
+	margin-top:0px;
+	z-index: 100;
+	padding:0px 0px;
+	ul {
+		background: $grey_two;
+		padding-top: 50px;
+		li {
+			a {
+				color: $white;
+				padding-left: 20px;				
+				&:hover {
+					color:$color-two;
+				}
+			}
+			&:hover {
+				background-color: $color-two;
+				color:$color-one;
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+///////////////////////////////////////////////////
+//??                                           ??//
+//??             *-   CONFIG   -*              ??//
+//??            	* COLORS *                 ??//
+//??                                           ??//
+///////////////////////////////////////////////////
+
+
+// ******************** //
+// 	  Primary Colors    //
+
+$color-one: 	#2a354a;
+$color-two:		#d39231;
+$color-three:	#262a32;
+$color-four:	#74777c;
+$color-five:	#f1f1f1;
+$color-six:		#252a32;
+
+$white:	#FFFFFF;
+$black: #000000;
+
+
+// ******************** //
+//    Grey scales		//
+
+$grey_one: #f1f1f1;
+$grey_two: #dddddd;
+$grey_three: #b3b3b3;
+$grey_four: #8a8a8a;
+
+
+// ******************** //
+// 	  Highlight color   // 
+
+::selection { color:white; background: rgba(169, 141, 77, 0.9);}
+::-moz-selection { color:white; background: rgba(169, 141, 77, 0.9);}
+ 
+
+// Dynamically change color
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $color-one; // Lighter backgorund, return dark color
+  } @else {
+    @return $color-five; // Darker background, return light color
+  }
+}

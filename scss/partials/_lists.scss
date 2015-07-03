@@ -1,0 +1,25 @@
+///////////////////////////////////////////////////
+//??                                           ??//
+//??             * 	   LISTS    *              ??//
+//??                                           ??//
+/////////////////////////////////////////////////// 
+
+ul {
+	display: block;
+	list-style-type: disc;
+	margin-before: 1em;
+	margin-after: 1em;
+	margin-start: 0;
+	margin-end: 0;
+	padding-start: 40px;
+	margin-left: 20px;
+	li {
+		@include font-size($base-font-size);
+		font-family: $base-font-family;
+		font-weight: $base-font-weight;
+		line-height: $base-line-height;
+		color: $font-color;
+		text-align: left;
+		letter-spacing: $base-font-letter-spacing;
+	}
+}

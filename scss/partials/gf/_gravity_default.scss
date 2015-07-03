@@ -1,0 +1,173 @@
+input[type="submit"], 
+input[type="button"] 
+{
+	-webkit-appearance: none;
+}
+
+::-webkit-input-placeholder { 
+	color: $input-color; 
+
+	&:focus { 
+		color: $input-color-focus;
+	}
+}
+
+.gform_wrapper {
+	font-family: $font-family-one;
+	width: $form-width;
+
+	@include alignment($form-alignmnent);
+	@include breakpoint(smart) 
+	{ 
+		width:80%;
+	}
+
+	.gform_body {
+		ul {
+			list-style:none;
+			margin:0;
+			padding:0;
+			
+			li {
+				// Text Input Fields
+				input, textarea, select {
+					background-color: $input-bg;
+					border: $input-border-style;
+					border-radius: $border-radius;
+					margin-bottom: $margin-bottom-top;
+					font-size: $input-font-size;
+					font-weight: $input-weight;
+					font-family: $font-family-one;
+					color: $input-color;
+				}
+
+				input, textarea {
+					outline:none;
+					@include input_scaling($input-width, $input-side-padding);
+					padding-top: $input-vertical-padding;
+					padding-bottom: $input-vertical-padding;
+
+					&:focus { 
+							border-color:  $input-border-focus;
+							background-color: $input-bg-focus;
+							color: $input-color-focus;
+					}
+				}
+
+				// Dropdown Fields
+				select {
+					// margin-bottom: $margin-bottom-top;
+					width: $input-width;
+					-webkit-appearance: none;
+	  				-webkit-border-radius: $border-radius;
+					height:45px;
+					text-indent:2%;
+				}
+
+				select[multiple="multiple"] {
+					height:100px;
+				}
+
+				.gfield_radio {
+					margin-bottom: 20px;
+
+					li {
+						height:25px;
+						padding-top: 5px;
+
+						input[type="radio"] {
+							float:left;
+							width:10%;
+						}
+
+						label {
+							display: block;
+							margin-top: 2px;
+							width:100%;
+						}
+					}
+				}
+
+				.gfield_checkbox {
+					margin-bottom: 20px;
+
+					li {
+						height:25px;
+						padding-top: 5px;
+
+						input[type=checkbox] {
+							float:left;
+							width:10%;
+						}
+
+						label {
+							display: block;
+							margin-top: 2px;
+							width:100%;
+						}
+					}
+				}
+
+				.gfield_checkbox {
+
+				}
+
+			} 	// end of li
+		} 		// end of ul
+
+		.gfield_description {
+			width:100%;
+			text-align: center;
+			font-weight: $form-font-weight;
+		}
+	} 			// end of form body
+
+	label.gfield_label {
+		display: $input-label-display;
+		color: $input-label-color;
+		margin-bottom: 4px;
+	}
+
+	// Form heading
+	.gform_heading {
+		width:100%;
+
+		.gform_title {
+			// form title styles
+		}
+
+		// form description styling
+		.gform_description {
+			display: block;
+			width:100%;
+			text-align: center;
+			font-weight: $form-font-weight;
+			margin-bottom: 20px;
+		}
+	}
+
+	.gform_footer {
+		width: 100%;
+
+		input[type=submit] {
+			width:100%;
+			border:none;
+		}
+	}
+} // end of form wrapper
+
+
+// Validation honey pot
+.gform_validation_container {
+	display:none;
+}
+
+.validation_message {
+	color: $input-error;
+}
+
+div.validation_error {
+	padding:10px;
+	color:#FFF;
+	background-color:#6f2720;
+}

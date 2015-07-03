@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////
+//??				  					       ??//
+//??			  	  MAP					   ??//
+//??				  					   	   ??//
+///////////////////////////////////////////////////
+
+.map {
+	width:100%;
+	height:400px;
+	margin-top: 30px;
+
+	@include breakpoint(smart) 
+	{ 
+		width:100%;
+		margin-bottom: 30px;
+	}
+}
+
+// Add more map ID's below...
