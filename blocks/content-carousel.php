@@ -1,7 +1,6 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Pixeldot
  */
 ?>
 <?php if(get_field('carousel')): ?>

@@ -1,7 +1,6 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Pixeldot    
+ * @package WordPress   
  */
 
 get_header(); ?>

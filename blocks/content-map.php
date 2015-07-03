@@ -1,7 +1,6 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Pixeldot
  */
 ?>
 <!-- IMPORTANT: use <?php //include(locate_template('blocks/content-map.php')); ?>  -->

@@ -31,4 +31,11 @@
 	    <?php endif;
 	}
 
+	function repeater_count($repeater_name) {
+		$col_counter = 0 
+		while(the_repeater_field($repeater_name)) {
+			 $col_counter++ 
+		}
+		return $col_counter
+	}
 ?>

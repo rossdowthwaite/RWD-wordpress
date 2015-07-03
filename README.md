@@ -9,5 +9,8 @@ Assumes the use of:
 * Wordpress (duh)
 * Advanced Custom Fields - http://www.advancedcustomfields.com/
 
+### Theme Libraby file
+Create a page that uses the "Theme Template" template. This contains all the basic site elements to begin developing your style.  
+
 ### Any improvements?
 If you have stumbled accross this and have any suggestions or improvements you would like to share, I'm all ears. This is simply a starter template I have developed over time to save some time, and is the product of many iterations of many projects so the chances are there I things that can be done better.
